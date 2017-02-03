@@ -18,7 +18,7 @@ def withAndroidSdk(String sdkDir = '/tmp/android-sdk',
 
 node {
 // Check out the source code
- git 'https://github.com/googlesamples/android-topeka'
+ git 'https://github.com/sumitsaiwal/android-topeka'
 // Build the app using the 'debug' build type,
 // and allow SDK components to auto-install
 withAndroidSdk {
