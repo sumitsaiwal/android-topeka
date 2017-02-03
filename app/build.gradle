@@ -49,7 +49,7 @@ android {
         }
         internal {
           // For internal builds, use an app ID separate from release builds
-          applicationIdSuffix '.dogfood
+          applicationIdSuffix '.dogfood'
           // Include the Jenkins build number in the displayed version name
           versionNameSuffix " (build ${jenkinsBuildNumber})"
           // Sign with the common debug key
