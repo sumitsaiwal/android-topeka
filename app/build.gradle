@@ -15,7 +15,8 @@
  */
 
 apply plugin: 'com.android.application'
-
+ext.versionMajor = 1; ext.versionMinor = 4; ext.versionPatch = 0;
+ext.jenkinsBuildNumber = Integer.valueOf(System.env.BUILD_NUMBER ?: 0)
 android {
     buildToolsVersion "25.0.0"
     compileSdkVersion 25
