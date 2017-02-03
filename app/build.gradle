@@ -40,7 +40,7 @@ android {
           // Override the local debug keystore, so that APKs built by
           // any developer, or by Jenkins can be installed on any device
           storeFile file('../debug.keystore')
-          }
+        }
     }
 
     buildTypes {
