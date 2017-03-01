@@ -22,7 +22,7 @@ node {
 // Build the app using the 'debug' build type,
 // and allow SDK components to auto-install
 withAndroidSdk {
- sh './gradlew clean assembleDebug'
+ sh './gradlew clean assembleDebug testDebugUnitTest'
 }
 // Analyse the JUnit test results
  junit '**/TEST-*.xml'
