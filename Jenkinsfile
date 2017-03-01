@@ -17,16 +17,20 @@ def withAndroidSdk(String sdkDir = '/tmp/android-sdk',
 
 
 node {
+ stage 'Pull from SCM'
 // Check out the source code
  git 'https://github.com/sumitsaiwal/android-topeka'
 // Build the app using the 'debug' build type,
 // and allow SDK components to auto-install
+ stage 'Test and Build app'
 withAndroidSdk {
  sh './gradlew clean assembleDebug testDebugUnitTest'
 }
 // Analyse the JUnit test results
+ stage 'Analyse JUnit test results'
  junit '**/TEST-*.xml'
 // Store the APK that was built
+ stage 'Archive APK'
  archive '**/*-debug.apk'
 }
 
