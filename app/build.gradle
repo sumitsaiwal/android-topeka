@@ -58,7 +58,11 @@ android {
           signingConfig signingConfigs.debug
         }
     }
-
+    
+    lintOptions {
+          abortOnError false
+      }
+      
     packagingOptions {
         exclude 'LICENSE.txt'
     }
