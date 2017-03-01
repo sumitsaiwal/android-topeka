@@ -40,6 +40,7 @@ android {
         debug {
           // Override the local debug keystore, so that APKs built by
           // any developer, or by Jenkins can be installed on any device
+          //keytool -genkey -v -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US" -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android
           storeFile file('../debug.keystore')
         }
     }
