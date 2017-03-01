@@ -24,8 +24,11 @@ node {
 // and allow SDK components to auto-install
  stage 'Test and Build app'
 withAndroidSdk {
- sh './gradlew clean assembleDebug testDebugUnitTest'
+ sh './gradlew clean assembleDebug lintDebug testDebugUnitTest'
 }
+// Analyse the JUnit test results
+ stage 'Analyse the Lint results'
+ androidLint unstableTotalHigh: '0'
 // Analyse the JUnit test results
  stage 'Analyse JUnit test results'
  junit '**/TEST-*.xml'
