@@ -18,7 +18,7 @@ apply plugin: 'com.android.application'
 ext.versionMajor = 1; ext.versionMinor = 4; ext.versionPatch = 0;
 ext.jenkinsBuildNumber = Integer.valueOf(System.env.BUILD_NUMBER ?: 0)
 android {
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "25.2.0"
     compileSdkVersion 25
 
     dataBinding {
@@ -73,7 +73,7 @@ ext {
     versionMajor = "1"
     versionMinor = "4"
     versionPatch = "0"
-    supportLibVersion = "25.0.0"
+    supportLibVersion = "25.2.0"
     espressoVersion = "2.2.2"
     androidTestVersion = "0.5"
     hamcrestVersion = "1.3"
