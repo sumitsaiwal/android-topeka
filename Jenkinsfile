@@ -28,7 +28,8 @@ node {
    sh './gradlew clean assembleDebug lintDebug testDebugUnitTest'
   }
  }
-// Analyse the JUnit test results
+ // Analyse the JUnit test results//androidLint plugin is required
+ //https://github.com/jenkinsci/job-dsl-plugin/blob/master/job-dsl-core/src/main/docs/examples/javaposse/jobdsl/dsl/helpers/publisher/PublisherContext/androidLint.groovy
  stage ('Analyse the Lint results') {
   androidLint unstableTotalHigh: '0'
  }
